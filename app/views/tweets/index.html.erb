@@ -48,9 +48,8 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="index.html">Home
-              <span class="sr-only">(current)</span>
-            </a>
+            <%= link_to "マイページ", "/users/#{current_user.id}" %>
+            
           </li>
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
@@ -127,7 +126,7 @@
       </div>
       <%= simple_format(tweet.text) %>
       <span class="name">
-        <%= tweet.name %>
+        
       </span>
     </div>
   <% end %>
