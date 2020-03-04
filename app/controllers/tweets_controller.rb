@@ -26,6 +26,10 @@ class TweetsController < ApplicationController
     tweet.update(tweet_params)
   end
 
+  def show
+    @tweet = Tweet.all
+  end
+
   private
   def tweet_params
     params.require(:tweet).permit(:image, :text).merge(user_id: current_user.id)
