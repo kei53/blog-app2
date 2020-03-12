@@ -45,7 +45,6 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active px-lg-4">
-            <%# <%= link_to "マイページ", "/users/#{current_user.id}" %> %>
             
           </li>
           <li class="nav-item px-lg-4">
@@ -121,6 +120,9 @@
           </li>
           <li>
             <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+          </li>
+          <li>
+            <%= link_to "マイページ", "/users/#{current_user.id}" %>
           </li>
           <% end %>
         </ul>
